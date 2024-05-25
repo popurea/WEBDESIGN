@@ -3,29 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" type="text/css" href="external_registration.css">
-
     <title>Employee Registration Form</title>
     <style>
-        .form-container{
+        .form-container {
             border: 3px solid #ccc;
-            padding: 20 px;
+            padding: 20px;
             width: 300px;
             margin: 0 auto;
+            background-color: #E6E6FA; 
         }
-        .form-container h1{
+        .form-container h1 {
             text-align: center;
         }
-        .form-container label, 
-        .form-container input[type="text"], 
-        .form-container button{
-            display: block;
-            margin-bottom: 10px;
+        .form-control {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
-        .form-container button{
+        .form-control label {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .form-control input[type="text"] {
+            flex: 2;
+        }
+        .form-container button {
             margin-top: 20px;
         }
+        .buttons button[type="submit"] {
+        background-color: #04AA6D;
+        color: white;
+}
+
+        .buttons button[type="button"] {
+        background-color: #FF5733;
+        color: white;
+}
     </style>
 </head>
 <body>
@@ -33,18 +47,33 @@
         <h1>Registration Form</h1>
         <form action="">
             <div class="form-control">
-                <label for="lastname">Last Name</label>
-                <input type="text" id="lastname" name="lastname" placeholder="Last Name">
-            </div>
-            <div class="form-control"> 
-                <label for="firstname">First Name</label>
-                <input type="text" id="firstname"  name="firstname" placeholder="First Name">
+                <label for="lastname">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Username">
             </div>
             <div class="form-control">
-                <label for="middlename">Middle Name</label>
-                <input type="text" id="middlename"  name="middlename" placeholder="Middle Name">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" placeholder="First Name">
             </div>
-            
+            <div class="form-control">
+                <label for="middlename">Middle Name:</label>
+                <input type="text" id="middlename" name="middlename" placeholder="Middle Name">
+            </div>
+            <div class="form-control">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+            </div>
+            <div class="form-control">
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-control">
+                <label for="confirmpassword">Confirm Password:</label>
+                <input type="text" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password">
+            </div>
+            <div class="form-control">
+                <label for="contact">E-mail:</label>
+                <input type="text" id="email" name="email" placeholder="E-mail">
+            </div>
             <div class="buttons">
                 <button type="submit">Register</button>
                 <button type="button">Cancel</button>
