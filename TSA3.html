@@ -1,0 +1,1240 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  >
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  >
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>Service Page</title>
+</head>
+<style>
+  body {
+    background-color: rgb(252, 248, 236);
+  }
+  .header-bar {
+    position: fixed;
+    width: 100%;
+    height: 7%;
+    background-color: rgba(29,20,148,1.00);
+    z-index: 5;
+    box-shadow: 0px 5px 5px rgb(29,20,148,1.00);
+  }
+
+  .title-container {
+    position: relative;
+    float: left;
+    height: 100%;
+    margin-left: 10%;
+    width: 20%;
+  }
+
+  .title {
+    color: #ffffff;
+    text-align: center;
+    padding: 4.5px 16px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .nav-container {
+    position: relative;
+    float: right;
+    height: 100%;
+  }
+
+  .nav-container a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 18px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    height: 100%;
+    font-weight: bold;
+  }
+
+  .icon-container {
+    visibility: hidden;
+  }
+
+  .nav-container a:hover {
+    background-color: #ffffff;
+    ;
+    color: rgb(255, 72, 0);
+  }
+
+  .nav-container a.active {
+    background-color: #ffffff;
+    ;
+    color: rgb(255, 72, 0);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Verdana, sans-serif;
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+
+  .top-container {
+    position: relative;
+    text-align: center;
+    background-color: rgb(131, 30, 30);
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    z-index: 3;
+    opacity: 1;
+  }
+
+  .pricing-container {
+    position: relative;
+    float: left;
+    text-align: center;
+    background-color: rgb(229, 221, 206);
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    margin: 0 auto;
+    z-index: 3;
+    opacity: 1;
+  }
+
+  .mid-container {
+    position: relative;
+    float: left;
+    background-color: rgb(229, 221, 206);
+    width: 100%;
+    height: 400px;
+    z-index: 3;
+    opacity: 1;
+  }
+
+  .bottom-container {
+    position: relative;
+    float: left;
+    background-color: rgb(59, 59, 59);
+    width: 100%;
+    height: 250px;
+    z-index: 3;
+    opacity: 1;
+  }
+
+  .email-container {
+    position: relative;
+    float: left;
+    background-color: rgb(29,20,148,1.00);
+    width: 100%;
+    height: 400px;
+    z-index: 3;
+    opacity: 1;
+    padding: 70px 0px;
+    opacity: 1;
+  }
+
+  .email-con-txt {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+
+  .email-input {
+    position: relative;
+    float: left;
+    margin-left: 30.1%;
+    width: 40%;
+  }
+
+  .email-btn {
+    position: relative;
+    float: left;
+    margin-left: 44%;
+    margin-top: 20px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: white;
+  }
+
+  .header-bar-fill {
+    position: relative;
+    width: 100%;
+    height: 7%;
+  }
+
+  .top-pricing {
+    position: relative;
+    background-color: rgb(229, 221, 206);
+    width: 100%;
+    height: 500px;
+  }
+
+  .top-con-img {
+    position: relative;
+    width: 70%;
+    margin-top: 3%;
+  }
+
+  .top-con-text {
+    display: none;
+  }
+
+  .mid-pricing {
+    position: relative;
+    width: 90%;
+    height: 800px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px 0px;
+  }
+
+  .pricing-tab:hover {
+    box-shadow: 15px 15px 15px;
+    cursor: pointer;
+  }
+
+  .pricing-tab-1 {
+    position: relative;
+    float: left;
+    width: 28%;
+    height: 700px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 3%;
+    margin-top: 30px;
+  }
+
+  .pricing-tab-2 {
+    position: relative;
+    float: left;
+    width: 28%;
+    height: 700px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 5.5%;
+    margin-top: 30px;
+  }
+
+  .pricing-tab-3 {
+    position: relative;
+    float: right;
+    width: 28%;
+    height: 700px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .dropdown-menu-container {
+    visibility: hidden;
+    background-color: rgb(255, 72, 0);
+  }
+
+  .top-part-col {
+    height: 60px;
+    background-color: rgb(255, 72, 0);
+    border-radius: 10px;
+    border-radius: 10px 10px 0px 0px;
+    padding: 0px 0px;
+  }
+
+  .mid-part-col {
+    padding: 40px 0px;
+    background-color: white;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+  }
+
+  .bot-part-col {
+    position: absolute;
+    bottom: 0%;
+    height: 350px;
+    /* background-color: rgb(255, 72, 0); */
+    border-radius: 10px;
+    border-radius: 0px 0px 10px 10px;
+    padding: 40px 0px;
+  }
+
+  .top-part-col-txt {
+    font-size: 35px;
+    font-style: bold;
+    color: white;
+  }
+
+  .mid-price-txt {
+    font-size: 85px;
+    font-style: bold;
+    color: rgb(54, 54, 54);
+  }
+
+  .bot-part-col-txt {
+    text-align: left;
+    font-size: 23px;
+    font-style: bold;
+    color: rgb(54, 54, 54);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .blog-1 {
+    position: relative;
+    float: left;
+    width: 22%;
+    height: 350px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 1.5%;
+    margin-top: 20px;
+  }
+
+  .blog-2 {
+    position: relative;
+    float: left;
+    width: 22%;
+    height: 350px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 3%;
+    margin-top: 20px;
+  }
+
+  .blog-3 {
+    position: relative;
+    float: left;
+    width: 22%;
+    height: 350px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 3%;
+    margin-top: 20px;
+  }
+
+  .blog-4 {
+    position: relative;
+    float: left;
+    width: 22%;
+    height: 350px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 3%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .blog-img {
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .blog:hover {
+    box-shadow: 15px 15px 15px;
+    cursor: pointer;
+  }
+
+  .bottom-txt-title-1 {
+    font-size: 35px;
+    color: white;
+  }
+
+  .bottom-txt-title-2 {
+    font-size: 18px;
+    color: white;
+  }
+
+  .bottom-txt {
+    font-size: 15px;
+    color: white;
+  }
+
+  .notification-dialog {
+    position: fixed;
+    bottom: 2%;
+    right: 1%;
+    width: 350px;
+    height: 100px;
+    background-color: rgb(253, 119, 66);
+    z-index: 3;
+    border-radius: 10px;
+    visibility: hidden;
+    padding: 7px 15px 5px;
+  }
+
+  .dialog-title {
+    color: white;
+    font-style: bold;
+    font-size: 25px;
+  }
+
+  .dialog-content {
+    color: white;
+    font-size: 15px;
+    margin-top: -10px;
+  }
+
+  @media screen and (max-width: 1500px) {
+    .icon-container {
+      visibility: visible;
+    }
+
+    .icon {
+      margin-top: -8px;
+    }
+
+    .nav-list {
+      display: none;
+    }
+
+    .dropdown-menu-container {
+      visibility: visible;
+      width: 500px;
+    }
+
+    .mid-pricing {
+      height: 1600px;
+    }
+
+    .pricing-tab-1 {
+      width: 30%;
+      height: 700px;
+      margin-left: 10%;
+      margin-top: 20px;
+    }
+
+    .pricing-tab-2 {
+      float: right;
+      width: 30%;
+      height: 700px;
+      margin-right: 10%;
+      margin-top: 20px;
+    }
+
+    .pricing-tab-3 {
+      margin-top: 20px;
+      float: left;
+      width: 30%;
+      height: 700px;
+      margin-left: 36%;
+    }
+
+    .email-input {
+      margin-left: 28%;
+      width: 45%;
+    }
+
+    .email-btn {
+      margin-left: 44%;
+    }
+
+    .top-container {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1438px) {
+    .title-container {
+      width: 21%;
+    }
+
+    .title {
+      margin-top: 0px;
+      font-size: 35px;
+    }
+
+    .top-con-img {
+      width: 75%;
+      margin-top: 50px;
+      height: 310px;
+    }
+  }
+
+  @media screen and (max-width: 1425px) {
+    .title-container {
+      width: 23%;
+    }
+  }
+
+  @media screen and (max-width: 1252px) {
+    .title-container {
+      width: 25%;
+    }
+
+    .top-con-img {
+      width: 80%;
+      margin-top: 50px;
+      height: 330px;
+    }
+
+    .pricing-tab-1 {
+      width: 40%;
+      margin-left: 30%;
+    }
+
+    .pricing-tab-2 {
+      float: left;
+      width: 40%;
+      margin-left: 30%;
+    }
+
+    .pricing-tab-3 {
+      width: 40%;
+      margin-left: 30%;
+    }
+
+    .email-input {
+      margin-left: 23%;
+      width: 55%;
+    }
+
+    .email-btn {
+      margin-left: 43%;
+    }
+  }
+
+  @media screen and (max-width: 1235px) {
+    .title-container {
+      width: 30%;
+    }
+
+    .mid-container {
+      height: auto;
+    }
+
+    .blog-1 {
+      width: 45%;
+      margin-left: 3%;
+
+    }
+
+    .blog-2 {
+      float: right;
+      width: 45%;
+      margin-right: 3%;
+    }
+
+    .blog-3 {
+      width: 45%;
+      margin-left: 3%;
+    }
+
+    .blog-4 {
+      float: right;
+      width: 45%;
+      margin-right: 3%;
+    }
+  }
+
+  @media screen and (max-width: 1170px) {
+    .top-con-img {
+      width: 85%;
+      margin-top: 50px;
+      height: 350px;
+    }
+
+    .pricing-tab-1 {
+      width: 45%;
+      margin-left: 29%;
+    }
+
+    .pricing-tab-2 {
+      float: left;
+      width: 45%;
+      margin-left: 29%;
+    }
+
+    .pricing-tab-3 {
+      width: 45%;
+      margin-left: 29%;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .email-input {
+      margin-left: 18%;
+      width: 65%;
+    }
+
+    .email-btn {
+      margin-left: 41%;
+    }
+
+    .title {
+      padding: 0px 0px;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .top-con-img {
+      width: 95%;
+      margin-top: 50px;
+      height: 370px;
+    }
+
+    .pricing-tab-1 {
+      width: 55%;
+      margin-left: 24%;
+    }
+
+    .pricing-tab-2 {
+      float: left;
+      width: 55%;
+      margin-left: 24%;
+    }
+
+    .pricing-tab-3 {
+      width: 55%;
+      margin-left: 24%;
+    }
+  }
+
+  @media screen and (max-width: 964px) {
+    .title-container {
+      width: 33%;
+    }
+  }
+
+  @media screen and (max-width: 947px) {
+    .title-container {
+      width: 37%;
+    }
+
+    .top-con-img {
+      width: 100%;
+      margin-top: 50px;
+      height: 390px;
+    }
+
+    .pricing-tab-1 {
+      width: 60%;
+      margin-left: 20%;
+    }
+
+    .pricing-tab-2 {
+      float: left;
+      width: 60%;
+      margin-left: 20%;
+    }
+
+    .pricing-tab-3 {
+      width: 60%;
+      margin-left: 20%;
+    }
+
+
+    .bottom-container {
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .title-container {
+      width: 39%;
+    }
+
+    .top-con-img {
+      width: 100%;
+      margin-top: 50px;
+      height: 390px;
+    }
+
+    .pricing-tab-1 {
+      width: 65%;
+      margin-left: 18%;
+    }
+
+    .pricing-tab-2 {
+      float: left;
+      width: 65%;
+      margin-left: 18%;
+    }
+
+    .pricing-tab-3 {
+      width: 65%;
+      margin-left: 18%;
+    }
+
+    .email-con-txt {
+      font-size: 45px;
+    }
+
+    .email-input {
+      margin-left: 13%;
+      width: 75%;
+    }
+
+    .email-btn {
+      margin-left: 39%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .title-container {
+      width: 44%;
+    }
+
+    .top-con-img {
+      height: 410px;
+    }
+
+    .blog-1 {
+      width: 80%;
+      margin-left: 10%;
+    }
+
+    .blog-2 {
+      float: left;
+      width: 80%;
+      margin-left: 10%;
+    }
+
+    .blog-3 {
+      width: 80%;
+      margin-left: 10%;
+    }
+
+    .blog-4 {
+      float: left;
+      width: 80%;
+      margin-left: 10%;
+    }
+  }
+
+  @media screen and (max-width: 663px) {
+    .title-container {
+      width: 47%;
+    }
+
+    .top-con-img {
+      display: none;
+    }
+
+    .top-pricing {
+      padding: 15% 10%;
+    }
+
+    .top-con-text {
+      font-size: 25px;
+      display: block;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .pricing-tab-1 {
+      width: 75%;
+      margin-left: 13%;
+    }
+
+    .pricing-tab-2 {
+      width: 75%;
+      margin-left: 13%;
+    }
+
+    .pricing-tab-3 {
+      width: 75%;
+      margin-left: 13%;
+    }
+
+    .email-con-txt {
+      font-size: 40px;
+    }
+
+    .email-input {
+      margin-left: 10%;
+      width: 80%;
+    }
+
+    .email-btn {
+      margin-left: 35%;
+    }
+  }
+
+  @media screen and (max-width: 655px) {
+    .title-container {
+      margin-left: 8%;
+      width: 51%;
+    }
+  }
+
+  @media screen and (max-width: 574px) {
+    .title-container {
+      margin-left: 8%;
+      width: 54%;
+    }
+
+    .email-con-txt {
+      font-size: 35px;
+    }
+
+    .email-input {
+      margin-left: 8%;
+      width: 85%;
+    }
+
+    .email-btn {
+      margin-left: 34%;
+    }
+
+    .bottom-txt-title-1 {
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 557px) {
+    .title-container {
+      margin-left: 6%;
+      width: 58%;
+    }
+
+    .dropdown-menu-container {
+      width: 400px;
+    }
+
+    .pricing-tab-1 {
+      width: 95%;
+      margin-left: 2.5%;
+    }
+
+    .pricing-tab-2 {
+      width: 95%;
+      margin-left: 2.5%;
+    }
+
+    .pricing-tab-3 {
+      width: 95%;
+      margin-left: 2.5%;
+    }
+  }
+
+  @media screen and (max-width: 507px) {
+    .title-container {
+      margin-left: 6%;
+      width: 60%;
+    }
+
+    .email-input {
+      margin-left: 2%;
+      width: 95%;
+    }
+
+    .email-btn {
+      width: 95%;
+      margin-left: 2%;
+    }
+  }
+
+  @media screen and (max-width: 490px) {
+    .title-container {
+      margin-left: 4%;
+      width: 65%;
+    }
+
+    .top-con-text {
+      font-size: 23px;
+    }
+
+  }
+
+  @media screen and (max-width: 437px) {
+    .title-container {
+      margin-left: 2%;
+      width: 72%;
+    }
+
+    .dropdown-menu-container {
+      width: 300px;
+    }
+
+    .email-con-txt {
+      font-size: 30px;
+    }
+  }
+
+  @media screen and (max-width: 394px) {
+    .title-container {
+      margin-left: 0%;
+      width: 80%;
+    }
+
+    .title {
+      padding: 0px 16px;
+    }
+
+    .top-con-text {
+      font-size: 22px;
+    }
+  }
+
+  @media screen and (max-width: 355px) {
+    .title {
+      padding: 0px 10px;
+    }
+  }
+
+  @media screen and (max-width: 340px) {
+    .title {
+      padding: 1px 10px;
+      font-size: 33px;
+    }
+
+    .top-con-text {
+      font-size: 21px;
+    }
+
+    .email-con-txt {
+      font-size: 30px;
+    }
+
+    .email-btn {
+      width: 95%;
+      margin-left: 2%;
+    }
+  }
+
+  @media screen and (max-width: 322px) {
+    .title {
+      padding: 2px 10px;
+      font-size: 30px;
+    }
+  }
+
+  @media screen and (max-width: 305px) {
+    .title-container {
+      margin-left: 3%;
+      width: 60%;
+    }
+
+    .title {
+      padding: 10px 0px;
+      font-size: 25px;
+    }
+  }
+
+  @media screen and (max-width: 301px) {
+    .title-container {
+      margin-left: 3%;
+      width: 60%;
+    }
+
+    .title {
+      padding: 12px 0px;
+      font-size: 23px;
+    }
+
+    .notification-dialog {
+      width: 250px;
+    }
+  }
+</style>
+
+<body>
+  <div class="header-bar">
+    <div class="title-container">
+      <p class="title">THE BACK</p>
+    </div>
+    <div
+      class="col-sm-8 nav-container"
+      id="my-nav-container"
+    >
+      <div class="nav-list">
+        <a href="#home">Home</a>
+        <a href="#news">Best Sellers</a>
+        <a href="#contact">New Releases</a>
+        <a href="#about">Pre-order titles</a>
+        <a href="#news">BLOG</a>
+        <a href="#contact">Shop by Category</a>
+        <a href="#about">Deals</a>
+      </div>
+      <div class="dropdown dropdown-container">
+        <a
+          href="javascript:void(0);"
+          class="icon-container"
+          data-toggle="dropdown"
+          onclick="myFunction()"
+        >
+          <i class="fa fa-bars fa-2x icon"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-container">
+          <a
+            href="#home"
+            class="dropdown-item"
+          >Home</a>
+          <a
+            href="#news"
+            class="dropdown-item"
+          >Best Sellers</a>
+          <a
+            href="#contact"
+            class="dropdown-item"
+          >New Releases</a>
+          <a
+            href="#about"
+            class="dropdown-item"
+          >Pre-order titles</a>
+          <a
+            href="#news"
+            class="dropdown-item"
+          >BLOG</a>
+          <a
+            href="#contact"
+            class="dropdown-item"
+          >Shop by Category</a>
+          <a
+            href="#about"
+            class="dropdown-item"
+          >Deals</a>
+        </div>
+      </div>
+    </div>
+    <div>
+
+    </div>
+  </div>
+  <div class="header-bar-fill"></div>
+  <div class="top-container">
+    <div class="top-pricing">
+      <img
+        class="top-con-img"
+        src="https://s1.r29static.com/bin/entry/8b1/x/1114868/image.jpg"
+      >
+      <p class="top-con-text">
+        Let your shoppingspree spirit go wild with all the clothes and merchandize that you want.
+		"The Back" definately has your back when it comes to style and fashion that you like.
+      </p>
+    </div>
+    <div class="pricing-container">
+      <div class="pricing-tab pricing-tab-1">
+        <div class="col-sm-12 top-part-col">
+          <p class="top-part-col-txt">Basic</p>
+        </div>
+        <div class="mid-part-col">
+          <p class="mid-price-txt">$25</p>
+        </div>
+        <div class="col-sm-12 bot-part-col">
+          <ul>
+            <li class="bot-part-col-txt">Start your Thrift.</li>
+            <li class="bot-part-col-txt">15% discount on every Php500 purchase.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pricing-tab pricing-tab-2">
+        <div class="col-sm-12 top-part-col">
+          <p class="top-part-col-txt">Standard</p>
+        </div>
+        <div class="mid-part-col">
+          <p class="mid-price-txt">$50</p>
+        </div>
+        <div class="col-sm-12 bot-part-col">
+          <ul>
+            <li class="bot-part-col-txt">Shoppingspree Spirit.</li>
+            <li class="bot-part-col-txt">20% discount on every Php500 purchase.</li>
+            <li class="bot-part-col-txt">Free Accessories worth Php300.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pricing-tab pricing-tab-3">
+        <div class="col-sm-12 top-part-col">
+          <p class="top-part-col-txt">Pro</p>
+        </div>
+        <div class="mid-part-col">
+          <p class="mid-price-txt">$75</p>
+        </div>
+        <div class="col-sm-12 bot-part-col">
+          <ul>
+            <li class="bot-part-col-txt">Let it Rain.</li>
+            <li class="bot-part-col-txt">25% discount on every Php500 purchase.</li>
+            <li class="bot-part-col-txt">Free Accessories worth Php500.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="email-container">
+      <p class="email-con-txt">We'd Love to Hear from You</p>
+      <input
+        type="email"
+        class="form-control email-input"
+        placeholder="Enter email"
+        id="email-txt-box"
+      >
+      <button class="btn btn-default email-btn">Submit</button>
+    </div>
+    <div class="mid-container">
+      <div class="blog blog-1">
+        <div class="col-sm-12">
+          <img
+            class="blog-img"
+            src="	https://femina.wwmindia.com/content/2020/jul/shopping-01--1594373374.jpg"
+          >
+          <br><br>
+          <h5>
+            Different kinds of sale every month.
+          </h5>
+        </div>
+      </div>
+      <div class="blog blog-2">
+        <div class="col-sm-12">
+          <img
+            class="blog-img"
+            src="	https://i.pinimg.com/originals/a0/9a/c5/a09ac5a97a563465785f902e5c547c2a.jpg"
+          >
+          <br><br>
+          <h5>
+            Get the latest trend when it comes to clothing with us.
+          </h5>
+        </div>
+      </div>
+      <div class="blog blog-3">
+        <div class="col-sm-12">
+          <img
+            class="blog-img"
+            src="https://cdn.24.co.za/files/Cms/General/d/8807/01a452e4dce2442cb0313d89dc0bc88b.jpg"
+          >
+          <br><br>
+          <h5>
+            Expand your taste of fashion with our clothing guides from the latest clothing trends.
+          </h5>
+        </div>
+      </div>
+      <div class="blog blog-4">
+        <div class="col-sm-12">
+          <img
+            class="blog-img"
+            src="https://nextluxury.com/wp-content/uploads/Belts-Fashion-Accessories-For-Men.jpg"
+          >
+          <br><br>
+          <h5>
+            Get different kind of clothes that catches your taste.
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-container">
+    <div class="col-sm 12 row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4">
+        <br>
+        <p class="bottom-txt-title-1">The Back</p>
+        <p class="bottom-txt">The Back is an open Thrift Clothing Storage. We can offer you a bunch of brands across
+          multiple styles—you'll never run out of clothes.
+          Visit one of our Branches in the Philippines.</p>
+      </div>
+      <div class="col-sm-2">
+        <br><br>
+        <p class="bottom-txt-title-2">Company</p>
+        <a
+          href="#"
+          class="bottom-txt"
+        >About us</a><br>
+        <a
+          href="#"
+          class="bottom-txt"
+        >Stores</a><br>
+        <a
+          href="#"
+          class="bottom-txt"
+        >Careers</a><br>
+      </div>
+      <div class="col-sm-2">
+        <br><br>
+        <p class="bottom-txt-title-2">Customer Service</p>
+        <a
+          href="#"
+          class="bottom-txt"
+        >FAQ</a><br>
+        <a
+          href="#"
+          class="bottom-txt"
+        >Contact Us</a><br>
+        <a
+          href="#"
+          class="bottom-txt"
+        >Discount Card</a><br>
+      </div>
+      <div class="col-sm-2">
+        <br><br>
+        <p class="bottom-txt-title-2">Policies</p>
+        <a
+          href="#"
+          class="bottom-txt"
+        >Privacy Policies</a><br>
+      </div>
+    </div>
+  </div>
+  <div
+    class="notification-dialog"
+    id="notif-dialog"
+  >
+    <p
+      class="dialog-title"
+      id="dialog-title"
+    >Success</p>
+    <p
+      class="dialog-content"
+      id="dialog-content"
+    >Thank you for submitting your email!</p>
+  </div>
+</body>
+<script>
+  myFunction();
+  function myFunction() {
+    var x = document.getElementById("my-nav-container");
+    x.className = "nav-container";
+  }
+
+  var x = document.getElementById('notif-dialog');
+  $(document).ready(function () {
+
+    $(".email-btn").click(function () {
+      if (document.getElementById('email-txt-box').value != '') {
+        x.style.visibility = 'visible';
+        document.getElementById('email-txt-box').value = '';
+        document.getElementById('dialog-title').innerHTML = 'Success';
+        document.getElementById('dialog-content').innerHTML = 'Thank you for submitting your email!';
+        $("#notif-dialog").fadeIn();
+      } else {
+        x.style.visibility = 'visible';
+        $("#notif-dialog").fadeIn();
+        document.getElementById('dialog-title').innerHTML = 'Error';
+        document.getElementById('dialog-content').innerHTML = 'Invalid email';
+      }
+    });
+
+    setInterval(() => {
+      $("#notif-dialog").fadeOut()
+    }, 3000)
+
+  });
+</script>
+
+</html>
