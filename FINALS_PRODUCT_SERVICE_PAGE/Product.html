@@ -1,0 +1,147 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>PokemonGo</title>
+	    <link rel="icon" href="img/logo.jpg" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokémon GO Online Store - Exclusive Item Boxes</title>
+        <link rel="stylesheet" href="product.css">
+        <script src="product.js" defer></script>
+    </head>
+    <body>
+        
+
+        <div class="banner">
+            <div class="logo">
+                <img src="Images/logo.png" alt="Pokemon GO Logo">
+            </div>
+            <p>Enjoy an Exclusive 15% Discount on Your Next Star Wars Purchase of $75 or More!</p>
+        </div>
+        <div class="nav-tabs">
+            <a href="#">Home</a>
+            <a href="#">Product</a>
+            <a href="#">About Us</a>
+            <a href="#">Login</a>
+            <a href="#">Signup</a>
+        </div>
+        <div class="Featured"
+        <img src="Images/7.png" alt="Featured">
+        <div class="container">
+            <h2>Item Boxes</h2>
+            
+            <div class="product-box1" id="product1">
+                <img src="images/3.png" alt="One Time Only Box">
+                <h2>Pokémon GO Fest 2024: Global Ticket</h2>
+                <h3>Limited Time Only</h3>
+                <p><strong>Price:</strong> 480 PokéCoins</p>
+                <p><strong>Description:</strong> Get your hands on this exclusive One Time Only Box! Packed with essential items to enhance your Pokémon GO adventure.</p>
+                <button onclick="addToCart('One Time Only Box', 480)">Add to Cart</button>
+            </div>
+            <div class="product-box" id="product2">
+                <img src="images/1.png" alt="Inbound from Ultra Space">
+                <h2>Inbound from Ultra Space Premium Research (Global Ticket) (Featured)</h2>
+                <p><strong>Price:</strong> 1480 PokéCoins</p>
+                <p><strong>Description:</strong> Dive into premium research with the Inbound from Ultra Space box. This global ticket gives you access to unique challenges and rewards.</p>
+                <button onclick="addToCart('Inbound from Ultra Space', 1480)">Add to Cart</button>
+            </div>
+            <div class="product-box" id="product3">
+                <img src="Images/1.png" alt="Ultra Raid Box">
+                <h2>Ultra Raid Box (Limited Time Only)</h2>
+                <p><strong>Price:</strong> 1480 PokéCoins</p>
+                <p><strong>Description:</strong> Prepare for battle with the Ultra Raid Box! Stock up on raid passes and more to take on powerful raid bosses across the world.</p>
+                <button onclick="addToCart('Ultra Raid Box', 1480)">Add to Cart</button>
+            </div>
+            <div class="product-box" id="product4">
+                <img src="Images/2.png" alt="Special Research Box">
+                <h2>Special Research Box</h2>
+                <p><strong>Price:</strong> 980 PokéCoins</p>
+                <p><strong>Description:</strong> Unlock special research tasks and rewards with this exclusive box.</p>
+                <button onclick="addToCart('Special Research Box', 980)">Add to Cart</button>
+            </div>
+            <div class="product-box" id="product5">
+                <img src="Images/6.png" alt="Adventure Box">
+                <h2>Adventure Box</h2>
+                <p><strong>Price:</strong> 1280 PokéCoins</p>
+                <p><strong>Description:</strong> Embark on new adventures with the Adventure Box, filled with items to help you on your journey.</p>
+                <button onclick="addToCart('Adventure Box', 1280)">Add to Cart</button>
+            </div>
+            <div class="large-product-box">
+                <h2>Mystery Boxes Specials</h2>
+                <div class="product-box">
+                    <img src="Images/5.png" alt="Special Offer 1">
+                    <h3>Mystery Boxes</h3>
+                    <p><strong>Price:</strong> 500 PokéCoins</p>
+                    <p><strong>Description:</strong> Take advantage of this special offer to get exclusive items at a great price.</p>
+                    <button onclick="addToCart('Special Offer 1', 500)">Add to Cart</button>
+                </div>
+                <div class="product-box">
+                    <img src="Images/5.png" alt="Special Offer 2">
+                    <h3>Mystery Box 2</h3>
+                    <p><strong>Price:</strong> 750 PokéCoins</p>
+                    <p><strong>Description:</strong> Don't miss out on this limited-time offer for premium items.</p>
+                    <button onclick="addToCart('Special Offer 2', 750)">Add to Cart</button>
+                </div>
+                <div class="coins">
+                <div class="PokéCoins">
+                    <h2>POKECOINS</h2>
+                    <div class="product-box">
+                        <img src="Images/coin1.png" alt="Special Offer 1">
+                        <h3>600 PokéCoins</h3>
+                        <p><strong>Price:</strong> 300 Php</p>
+                        <p><strong>Description:</strong> Take advantage of this special offer to get exclusive items at a great price.</p>
+                        <button onclick="addToCart('Special Offer 1', 300)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <img src="Images/coins2.png" alt="Special Offer 2">
+                        <h3>1,300 PokéCoins</h3>
+                        <p><strong>Price:</strong> 1000 Php</p>
+                        <p><strong>Description:</strong> Don't miss out on this limited-time offer for premium items.</p>
+                        <button onclick="addToCart('Special Offer 2', 1000)">Add to Cart</button>
+                    </div>
+                    <div class="product-box">
+                        <img src="Images/coins3.png" alt="Special Offer 2">
+                        <h3>15,300 PokéCoins</h3>
+                        <p><strong>Price:</strong> 15000 Php</p>
+                        <p><strong>Description:</strong> Don't miss out on this limited-time offer for premium items.</p>
+                        <button onclick="addToCart('Special Offer 2', 15000)">Add to Cart</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="cta">
+                <a href="#">Sign in now to add these exclusive item boxes to your collection!</a>
+            </div>
+            <div class="cart">
+                <h2>Shopping Cart</h2>
+                <ul id="cartItems"></ul>
+                <p><strong>Total:</strong> <span id="totalPrice">0</span> PokéCoins</p>
+            </div>
+        </div>
+    </body>
+    <div id="footer">
+            
+        <div class="foot">
+            <div class="logo">
+                <img src="Images/logo.png" alt="Pokemon GO Logo">
+            </div> <label style="font-size:17px;"> Copyright &copy; </label>
+            <p style="font-size:25px;">PokemonGo 2024</p>
+        </div>
+            
+            <div id="foot">
+                <h4>Links</h4>
+                    <ul>
+                        <a href="http://www.facebook.com/PokemonGo"><li>Facebook</li></a>
+                        <a href="http://www.twitter.com/PokemonGo"><li>Twitter</li></a>
+                        <a href="http://www.pinterest.com/PokemonGo"><li>Pinterest</li></a>
+                        <a href="http://www.tumblr.com/PokemonGo"><li>Tumblr</li></a>
+                    </ul>
+            </div>
+            <div id="develop">
+                <h4>Developed By:</h4>
+                    <ul>
+                        <a href="#"><li>John Lester Pangilinan</li><a>
+                    </ul>
+            </div>
+    </div>
+    </html>
